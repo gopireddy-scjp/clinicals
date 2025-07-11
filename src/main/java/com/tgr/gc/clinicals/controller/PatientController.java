@@ -25,12 +25,6 @@ public class PatientController {
         return ResponseEntity.ok(savedPatient);
     }
 
-    // implementation of endpoint to save list of patients
-    @PostMapping("/batch")
-    public ResponseEntity<List<Patient>> createPatients(@RequestBody List<Patient> patients) {
-        List<Patient> savedPatients = patientService.savePatients(patients);
-        return ResponseEntity.ok(savedPatients);
-    }
 
     @GetMapping
     public ResponseEntity<List<Patient>> getAllPatients() {
